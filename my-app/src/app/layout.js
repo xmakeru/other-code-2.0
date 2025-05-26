@@ -1,6 +1,7 @@
 import { Onest } from "next/font/google"
 import "./globals.css";
 import Header from "@/components/reuse/Header/Header";
+import Footer from "@/components/reuse/Footer/Footer";
 
 
 
@@ -22,7 +23,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
           {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

@@ -1,3 +1,7 @@
+import ExpertAdvantages from "@/components/reuse/ExpertAdvantages/ExpertAdvantages";
+import Faq from "@/components/reuse/Faq/Faq";
+import Projects from "@/components/reuse/Projects/Projects";
+import Technologies from "@/components/reuse/Technologies/Technologies";
 import WorkDirections from "@/components/reuse/WorkDirections/WorkDirections";
 
 export default function Home() {
@@ -31,6 +35,10 @@ export default function Home() {
       </section>
 
       <WorkDirections />
+      <Technologies />
+      <Projects />
+      <ExpertAdvantages />
+      <Faq />
 
     </main>
   );

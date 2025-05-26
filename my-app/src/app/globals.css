@@ -2,7 +2,7 @@
 
 @theme {
   --breakpoint-*: initial;
-  --breakpoint-xs: 380px;
+  --breakpoint-xs: 420px;
   --breakpoint-sm: 680px;
   --breakpoint-smd: 720px;
   --breakpoint-smd-md: 820px;
@@ -41,9 +41,6 @@
   }
   h2 {
     @apply text-[30px] sm:text-[32px] md:text-[52px]
-  }
-  h3 {
-    @apply text-[20px] sm:text-[24px] md:text-[36px]
   }
   p {
     @apply text-[20px] md:text-[24px] text-dark-grey font-normal leading-[130%]
@@ -88,54 +85,6 @@
     border-color: red;
   }
   
-
-  .swiper-pagination {
-    margin-top: 45px;
-    position: block !important;
-    bottom: 10px !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    z-index: 10;
-    overflow: visible
-  }
-  .swiper-custom-pagination {
-    position: absolute;
-    bottom: 10px !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    z-index: 10;
-    overflow: visible
-  }
-  .swiper-custom-pagination-2 {
-    position: absolute;
-    bottom: 10px !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    z-index: 10;
-    overflow: visible
-  }
-  .swiper-custom-pagination-3 {
-    position: absolute;
-    bottom: 10px !important;
-    display: flex !important;
-    justify-content: center;
-    gap: 10px;
-    z-index: 10;
-    overflow: visible
-  }
-  /* .swiper-pagination {
-    position: absolute;
-    bottom: 10px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 8px;
-    z-index: 10;
-  }
-   */
   .swiper-custom-bullet {
     width: 30px;
     height: 8px;
