@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-xs: 380px;
+  --breakpoint-sm: 680px;
+  --breakpoint-smd: 720px;
+  --breakpoint-smd-md: 820px;
+  --breakpoint-md: 901px;
+  --breakpoint-mlg: 1020px;
+  --breakpoint-lg: 1170px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1370px;
+  --breakpoint-3xl: 1500px;
+  --breakpoint-3-5xl: 1590px;
+  --breakpoint-4xl: 1690px;
+  --breakpoint-4-25xl: 1740px;
+  --breakpoint-4-5xl: 1830px;
+  --breakpoint-5xl: 1919px;
+  --breakpoint-6xl: 2100px;
+  --color-*: initial;
+  --color-grey: #dadada;
+  --color-light-grey: #f0f0f0;
+  --color-white: #fff;
+  --color-black: #000000;
+  --color-red: #ff3c00;
+  --color-dark-red: #d71400;
+  --color-dark-grey: #8f8f8f;
+ 
+}
+
+@layer base {
+  body, body * {
+    @apply font-medium leading-[120%]
+  }
+  h1 {
+    @apply text-[36px] md:text-[80px]
+  }
+  h1 + p {
+    @apply text-[26px] md:text-[40px] font-light text-grey leading-[130%]
+  }
+  h2 {
+    @apply text-[30px] sm:text-[32px] md:text-[52px]
+  }
+  h3 {
+    @apply text-[20px] sm:text-[24px] md:text-[36px]
+  }
+  p {
+    @apply text-[20px] md:text-[24px] text-dark-grey font-normal leading-[130%]
+  }
+ 
+}
+
+
+
+@layer components {
+  .px-main {
+    @apply md:px-[100px] sm:px-10 px-5
+  }
+  .btn-orange {
+    @apply bg-red hover:bg-dark-red text-white text-nowrap transition-all duration-300 
+    cursor-pointer rounded-[6px] text-[18px] sm:text-[16px] md:text-[18px] leading-[130%]
+    px-[1.5625rem] py-[1.125rem] sm:px-[1.125rem] sm:py-[0.875rem] md:px-[1.5625rem] md:py-[1.125rem] tracking-[0.08rem]
+  }
+  .btn-grey {
+    @apply bg-grey hover:bg-dark-grey px-[18px] py-3 text-black text-nowrap transition-all duration-300 
+    cursor-pointer rounded-[6px] text-[18px] sm:text-[16px] md:text-[18px] leading-[130%]
+  }
+  .mb-to-footer {
+    @apply mb-20 sm:mb-[100px] md:mb-[154px]
+  }
+  .pt-from-header {
+    @apply md:pt-[262px] sm:pt-[163px] pt-0
+  }
+  .header-padding {
+    @apply sm:px-10 sm:py-10 md:px-24 md:py-15 py-5 px-5
+  }
+
+   .checkbox-input {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: red; 
+  }
+  
+  .checkbox-input:checked {
+    background-color: red;
+    border-color: red;
+  }
+  
+
+  .swiper-pagination {
+    margin-top: 45px;
+    position: block !important;
+    bottom: 10px !important;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    overflow: visible
+  }
+  .swiper-custom-pagination {
+    position: absolute;
+    bottom: 10px !important;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    overflow: visible
+  }
+  .swiper-custom-pagination-2 {
+    position: absolute;
+    bottom: 10px !important;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    overflow: visible
+  }
+  .swiper-custom-pagination-3 {
+    position: absolute;
+    bottom: 10px !important;
+    display: flex !important;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+    overflow: visible
+  }
+  /* .swiper-pagination {
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    z-index: 10;
+  }
+   */
+  .swiper-custom-bullet {
+    width: 30px;
+    height: 8px;
+    background-color: #8F8F8F;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .swiper-custom-bullet-active {
+    background-color: #FF3C00;
+    cursor: pointer;
+  }
+  
+  .radio-container {
+    display: flex; 
+    align-items: center; 
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    padding-left: 45px; 
+    min-height: 25px; 
+  }
+  
+  .radio-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .radio-checkmark {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    height: 30px;
+    width: 30px;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    transform: translateY(-55%); 
+  }
+  
+  .radio-container:hover input ~ .radio-checkmark {
+    border-color: red;
+  }
+  
+  .radio-container input:checked ~ .radio-checkmark {
+    background-color: red;
+    border-color: red;
+  }
+  
+  .radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+    width: 6px; 
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -50%) rotate(45deg); 
+  }
+  
+  .radio-container input:checked ~ .radio-checkmark:after {
+    display: block;
+  }
+ 
+}
+
