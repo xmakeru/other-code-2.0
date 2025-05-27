@@ -25,7 +25,7 @@ export default function MobileSlider() {
         {PROJECTS_ITEMS.map((i, index) => (
           <SwiperSlide
             key={index}
-            className="w-full h-full bg-center bg-cover cursor-grab"
+            className="w-full h-full bg-center bg-cover cursor-grab active:cursor-grabbing"
             style={{ backgroundImage: `url(${i.image})` }}>
             <div
             className="p-[2.375rem] flex flex-col gap-[1.375rem]">
@@ -45,8 +45,6 @@ export default function MobileSlider() {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* Контейнер для пагинации */}
       <div className="swiper-pagination flex gap-3 absolute bottom-5 z-40" />
     </div>
   );

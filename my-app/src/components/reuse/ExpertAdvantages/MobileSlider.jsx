@@ -7,7 +7,7 @@ import { EXPERT_ADVANTAGES } from "@/Items/Advantages";
 
 export default function MobileSlider() {
   return(
-    <div className="">
+    <div className="block sm:hidden">
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
@@ -22,7 +22,7 @@ export default function MobileSlider() {
         spaceBetween={-60}
         pagination={{
           clickable: true,
-          el: '.swiper-pagination',
+          el: '.swiper-pagination-2',
           bulletClass: "swiper-custom-bullet",
           bulletActiveClass: "swiper-custom-bullet-active",
         }}
@@ -37,7 +37,7 @@ export default function MobileSlider() {
         modules={[Pagination, Autoplay, EffectCoverflow]}>
         {EXPERT_ADVANTAGES.map((i, index) => (
           <SwiperSlide
-          className="cursor-grab shadow-lg mt-4 mb-6">
+          className="cursor-grab active:cursor-grabbing shadow-lg mt-4 mb-6">
             <div
             className="flex flex-col gap-[1.0625rem] p-[1.875rem] h-full xs:h-[500px]">
               {i.mobileIcon}
@@ -47,7 +47,7 @@ export default function MobileSlider() {
             </div>
           </SwiperSlide>
         ))}
-        <div className="swiper-pagination flex justify-center gap-3 mt-8"></div>
+        <div className="swiper-pagination-2 flex justify-center gap-3 mt-8"></div>
       </Swiper>
     </div>
   )

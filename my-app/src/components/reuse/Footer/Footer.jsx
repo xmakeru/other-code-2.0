@@ -4,28 +4,28 @@ import { NAV_ITEMS } from "@/Items/Links";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#646363] py-[85px] sm:p-10 md:py-[80px] md:px-[100px] px-[93px] flex justify-center">
+   <footer className="bg-[#646363] py-[85px] sm:p-10 md:py-[80px] md:px-[100px] px-[93px] flex justify-center">
       <div className="flex flex-col sm:flex-row items-start sm:items-stretch gap-[45px] mlg:gap-24 lg:gap-40 xl:gap-0 w-auto sm:w-full">
-        <div className="w-full pr-0 xl:pr-10 3xl:pr-20 5xl:pr-[137px] flex-1 flex flex-col justify-between">
+        <div className="w-full pr-0 xl:pr-10 3xl:pr-20 5xl:pr-[137px] flex-1 flex flex-col gap-12">
           <Logo />
-          <p className="text-grey font-normal text-[16px] items-end mt-5 sm:mt-0 ">
+          <p className="text-grey font-normal text-[16px] items-end mt-5 sm:mt-0 text-nowrap">
             &copy; 2024 Все права защищены.
             <br />
             Политика конфиденциальности
           </p>
         </div>
         <div className="w-full px-0 xl:px-10 3xl:px-20 5xl:px-[137px] flex-1 xl:border-l-[1px] border-grey">
-          <h4 className="font-extrabold text-grey text-nowrap pb-[3px]">
+          <h4 className="font-extrabold text-grey text-nowrap text-[18px]">
             ООО «ДругойКод»
           </h4>
-          <p className="text-grey font-light text-[18px]">
-            Ставрополь, ул. Мира, 319
-            <br />
-            info@othercode.ru
+          <p className="text-grey font-light text-[18px] pb-3">
+            Ставрополь, ул. Мира, 319 <br />
+            <a href="mailto:info@othercode.ru">info@othercode.ru</a>
           </p>
-          <p className="text-grey font-extrabold pt-[12px] text-nowrap">
+          <a href="tel:+79196549289" 
+          className="text-grey font-extrabold text-[20px] text-nowrap">
             +7 919 654-92-89
-          </p>
+          </a>
         </div>
         <nav className="gap-[65px] w-full px-0 xl:px-10 3xl:px-20 5xl:px-[137px] flex-1 xl:border-l-[1px] border-grey hidden xl:grid grid-cols-2">
           <ul className="grid grid-rows-3 h-full">

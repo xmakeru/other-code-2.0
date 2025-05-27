@@ -51,7 +51,7 @@ export default function Projects() {
             }}
           >
             <div className="p-[60px] h-full flex flex-col">
-              <h3>{e.title}</h3>        
+              <h3 className="md:text-4xl text-2xl">{e.title}</h3>        
               {e.tegs.length > 0 && (
                 <div className="flex flex-wrap md:gap-3 gap-[8px] mt-6 md:mt-9 lg:text-base text-xs">
                   {e.tegs.map((teg, index) => (
@@ -69,7 +69,7 @@ export default function Projects() {
           <form 
           onSubmit={handleSubmit}
           className="flex flex-col h-full" >
-            <h3>Обсудим ваш проект?</h3>
+            <h3 className="md:text-4xl text-2xl">Обсудим ваш проект?</h3>
             <span className="text-[20px] sm:text-[16px] md:text-[24px] mt-4 4xl:mb-10 mb-7">
               Выберите одно из направлений работы и заполните бриф, пожалуйста
             </span>

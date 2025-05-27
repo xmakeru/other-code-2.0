@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export async function POST(req) {
   const formData = await req.formData();
 
-  // Текстовое сообщение
+
   const name = formData.get("name") || "";
   const phone = formData.get("phone") || "";
   const mail = formData.get("mail") || "";
@@ -37,7 +37,7 @@ export async function POST(req) {
   );
 
   // Обработка изображений
-  const files = formData.getAll("images"); // получаем список файлов
+  const files = formData.getAll("images"); 
 
   for (const file of files) {
     if (file instanceof File) {
