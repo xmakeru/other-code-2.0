@@ -3,7 +3,6 @@ import { useState } from "react";
 import StepModal from "@/components/reuse/Projects/StepModal";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import MobileSlider from "@/components/reuse/Projects/MobileSlider";
 
 const navTegs = [
   { id: 1, title: "Все проекты" },

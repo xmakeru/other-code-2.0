@@ -1,6 +1,6 @@
 import CustomAccordeon, { AccordeonItem } from "../../components/ui/CustomAccordeon"
-import { VACANSY_ITEMS } from "@/items/Vacansy"
-import { ARTICLES_REASONS } from "@/items/Vacansy"
+import { VACANSY_ITEMS } from "@/Items/Vacansy"
+import { ARTICLES_REASONS } from "@/Items/Vacansy"
 
 export const metadata = {
   title: "Other code | Вакансии",
