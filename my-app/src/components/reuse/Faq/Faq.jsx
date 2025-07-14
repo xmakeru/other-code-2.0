@@ -1,4 +1,4 @@
-import { FAQ_ITEMS } from "@/Items/Faq";
+import { FAQ_ITEMS } from "@/config/constants/Faq";
 import CustomAccordeon, {AccordeonItem} from "@/components/ui/CustomAccordeon";
 
 

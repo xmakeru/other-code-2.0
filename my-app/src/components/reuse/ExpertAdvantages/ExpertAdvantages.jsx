@@ -1,4 +1,4 @@
-import { EXPERT_ADVANTAGES } from "@/Items/Advantages";
+import { EXPERT_ADVANTAGES } from "@/config/constants/Advantages";
 import MobileSlider from "./MobileSlider";
 
 

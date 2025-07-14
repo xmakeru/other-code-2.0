@@ -1,5 +1,5 @@
 "use client";
-import { NAV_ITEMS } from "@/Items/Links";
+import { NAV_ITEMS } from "@/config/constants/Links";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Logo from "./Logo";
@@ -93,16 +93,17 @@ export default function Header() {
               Обсудить задачу
             </button>
 
-           
+           {/* Здесь поменялись отступы у выпадающего меню */}
             <div
               ref={menuRef}
-              className={`absolute top-full mt-4 sm:-mt-8 sm:right-[10rem] z-50 right-4
+              className={`absolute top-full mt-4 sm:-mt-8 2xl:right-[10rem] z-50 sm:right-58 right-4
                 bg-red rounded-md px-[36px] py-[39px] sm:p-[30px]
                 w-[340px] sm:w-[220px] text-white
                 transition-all duration-300 ease-in
                 ${isOpen ? "max-h-[517px] opacity-100 visible" : "max-h-0 opacity-0 invisible"}
               `}
             >
+              {/* ^^^^^^^ */}
               <nav>
                 <ul className="flex flex-col sm:gap-[18px] gap-[22px] items-start">
                   {NAV_ITEMS.map((e) => (

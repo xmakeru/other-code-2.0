@@ -2,7 +2,7 @@
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import { PROJECTS_ITEMS } from "@/Items/Projects";
+import { PROJECTS_ITEMS } from "@/config/constants/Projects";
 
 export default function MobileSlider() {
   return (
@@ -33,7 +33,7 @@ export default function MobileSlider() {
               className="text-[1.375rem] text-white">{i.title}</h3>
               <div
               className="flex gap-2">
-                {i.tegs.map((i, index) => (
+                {i.tags.map((i, index) => (
                   <span
                   key={index}
                   className="rounded-[4.6875rem] bg-white px-3 py-[0.5625rem] text-[0.75rem]">

@@ -1,7 +1,7 @@
 'use client'
 import "swiper/css";
-import { US_ARTICLES_1, US_ARTICLES_2, US_ARTICLES_3 } from "../../Items/Uslugi"
-import { PROJECTS_ITEMS } from "@/Items/Projects"
+import { US_ARTICLES_1, US_ARTICLES_2, US_ARTICLES_3 } from "../../config/constants/Uslugi"
+import { PROJECTS_ITEMS } from "@/config/constants/Projects"
 import CustomAccordeon, { AccordeonItem } from "@/components/ui/CustomAccordeon"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination, Autoplay } from "swiper/modules"
@@ -81,7 +81,7 @@ export default function WebDev() {
             speed={1000}
             className="w-full h-full"
           >
-            {PROJECTS_ITEMS.filter((slide) => slide.tegs.includes("#web")).map((slide, index) => (
+            {PROJECTS_ITEMS.filter((slide) => slide.tags?.includes("#web")).map((slide, index) => (
               <SwiperSlide key={slide.id} className="relative aspect-square overflow-hidden cursor-grab active:cursor-grabbing">
                 <div
                   className="w-full h-full"
@@ -93,11 +93,11 @@ export default function WebDev() {
                 >
                   <div className="p-[38px] h-full flex flex-col">
                     <h4 className={`text-[24px] 3xl:text-[36px] font-medium text-white`}>{slide.title}</h4>
-                    {slide.tegs.length > 0 && (
+                    {slide.tags.length > 0 && (
                       <div className="flex flex-wrap gap-3 md:mt-6 mt-[22px]">
-                        {slide.tegs.map((tag, index) => (
+                        {slide.tags.map((teg, index) => (
                           <div key={index} className="bg-white px-4 py-1 rounded-2xl font-medium text-black">
-                            {tag}
+                            {teg}
                           </div>
                         ))}
                       </div>
@@ -144,7 +144,7 @@ export default function WebDev() {
           speed={800}
           autoplay={false}
         >
-          {PROJECTS_ITEMS.filter((slide) => slide.tegs.includes("#web")).map((slide) => (
+          {PROJECTS_ITEMS.filter((slide) => slide.tags?.includes("#web")).map((slide) => (
             <SwiperSlide key={slide.id} className="relative aspect-square overflow-hidden cursor-grab active:cursor-grabbing">
               <div
                 className="w-full h-full"
@@ -156,11 +156,11 @@ export default function WebDev() {
               >
                 <div className="p-[38px] h-full flex flex-col">
                   <h4 className="text-[24px] font-medium text-white">{slide.title}</h4>
-                  {slide.tegs.length > 0 && (
+                  {slide.tags.length > 0 && (
                     <div className="flex flex-wrap gap-3 mt-[22px] 4xl:mt-[35px] md:mt-6">
-                      {slide.tegs.map((tag, index) => (
+                      {slide.tags.map((teg, index) => (
                         <div key={index} className="bg-white px-4 py-1 rounded-2xl font-medium text-black">
-                          {tag}
+                          {teg}
                         </div>
                       ))}
                     </div>
@@ -294,7 +294,7 @@ export default function WebDev() {
             speed={1000}
             className="w-full h-full"
           >
-            {PROJECTS_ITEMS.filter((slide) => slide.tegs.includes("#tg bot")).map((slide) => (
+            {PROJECTS_ITEMS.filter((slide) => slide.tags?.includes("#tg bot")).map((slide) => (
               <SwiperSlide key={slide.id} className="relative aspect-square overflow-hidden cursor-grab active:cursor-grabbing">
                 <div
                   className="w-full h-full"
@@ -306,11 +306,11 @@ export default function WebDev() {
                 >
                   <div className="p-[38px] h-full flex flex-col">
                     <h4 className="text-[24px] 3xl:text-[36px] font-medium text-white">{slide.title}</h4>
-                    {slide.tegs.length > 0 && (
+                    {slide.tags.length > 0 && (
                       <div className="flex flex-wrap gap-3 mt-[22px] 4xl:mt-[35px] md:mt-6">
-                        {slide.tegs.map((tag, index) => (
+                        {slide.tags.map((teg, index) => (
                           <div key={index} className="bg-white px-4 py-1 rounded-2xl font-medium text-black">
-                            {tag}
+                            {teg}
                           </div>
                         ))}
                       </div>
@@ -338,7 +338,7 @@ export default function WebDev() {
           speed={800}
           autoplay={false}
         >
-          {PROJECTS_ITEMS.filter((slide) => slide.tegs.includes("#tg bot")).map((slide) => (
+          {PROJECTS_ITEMS.filter((slide) => slide.tags?.includes("#tg bot")).map((slide) => (
             <SwiperSlide key={slide.id} className="relative aspect-square overflow-hidden cursor-grab active:cursor-grabbing">
               <div
                 className="w-full h-full"
@@ -350,11 +350,11 @@ export default function WebDev() {
               >
                 <div className="p-[38px] h-full flex flex-col">
                   <h4 className="text-[24px] font-medium text-white">{slide.title}</h4>
-                  {slide.tegs.length > 0 && (
+                  {slide.tags.length > 0 && (
                     <div className="flex flex-wrap gap-3 mt-[22px] 4xl:mt-[35px] md:mt-6">
-                      {slide.tegs.map((tag, index) => (
+                      {slide.tags.map((teg, index) => (
                         <div key={index} className="bg-white px-4 py-1 rounded-2xl font-medium text-black">
-                          {tag}
+                          {teg}
                         </div>
                       ))}
                     </div>

@@ -1,5 +1,5 @@
 'use client'
-import { PROJECTS_ITEMS } from "@/Items/Projects"
+import { PROJECTS_ITEMS } from "@/config/constants/Projects"
 import StepModal from "./StepModal"
 import { useState } from "react"
 import Link from "next/link"
@@ -52,11 +52,11 @@ export default function Projects() {
           >
             <div className="p-[60px] h-full flex flex-col">
               <h3 className="md:text-4xl text-2xl">{e.title}</h3>        
-              {e.tegs.length > 0 && (
+              {e.tags.length > 0 && (
                 <div className="flex flex-wrap md:gap-3 gap-[8px] mt-6 md:mt-9 lg:text-base text-xs">
-                  {e.tegs.map((teg, index) => (
+                  {e.tags.map((tag, index) => (
                     <div key={index} className="bg-white py-3 px-4 rounded-[100px] text-black md:text-base text-[12px]">
-                      {teg}
+                      {tag}
                     </div>
                   ))}
                 </div>

@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useRef } from "react";
-import { DIRECTIONS_ITEMS } from "@/Items/WorkDirections";
+import { DIRECTIONS_ITEMS } from "@/config/constants/WorkDirections";
 
 export default function MobileAccordeon() {
   const [selected, setSelected] = useState(null);

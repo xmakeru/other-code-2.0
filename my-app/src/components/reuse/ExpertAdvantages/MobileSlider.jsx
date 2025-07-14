@@ -2,7 +2,7 @@
 import "swiper/css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules'
-import { EXPERT_ADVANTAGES } from "@/Items/Advantages";
+import { EXPERT_ADVANTAGES } from "@/config/constants/Advantages";
 
 
 export default function MobileSlider() {

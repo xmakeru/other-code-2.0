@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Logo from "./Logo";
-import { NAV_ITEMS } from "@/Items/Links";
+import { NAV_ITEMS } from "@/config/constants/Links";
 
 export default function Footer() {
   return (

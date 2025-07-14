@@ -1,4 +1,4 @@
-import { PROJECTS_ITEMS } from "@/Items/Projects"
+import { PROJECTS_ITEMS } from "@/config/constants/Projects"
 import ProjectsClient from "./ProjectsClient"
 
 export const metadata = {

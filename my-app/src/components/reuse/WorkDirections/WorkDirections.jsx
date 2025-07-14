@@ -1,4 +1,4 @@
-import { DIRECTIONS_ITEMS } from "@/Items/WorkDirections";
+import { DIRECTIONS_ITEMS } from "@/config/constants/WorkDirections";
 import MobileAccordeon from "./MobileAccordeon";
 import Link from "next/link";
 
