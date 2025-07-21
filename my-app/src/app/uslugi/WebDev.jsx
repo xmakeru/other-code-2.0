@@ -11,7 +11,7 @@ export default function WebDev() {
   return(
     <>
     {/* ПЕРВАЯ ТЕМА */}
-    <section >
+    <section aria-label="Web-разработка">
     <div className="w-full sm:w-3/4 3xl:w-1/2 flex flex-col md:gap-[35px] mb-[150px] ">
       <h2>Web-разработка</h2>
       <p 
@@ -90,6 +90,8 @@ export default function WebDev() {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
+                  aria-label={`Изображение проекта: ${slide.title}`}
+                  role="img"
                 >
                   <div className="p-[38px] h-full flex flex-col">
                     <h4 className={`text-[24px] 3xl:text-[36px] font-medium text-white`}>{slide.title}</h4>

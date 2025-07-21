@@ -38,14 +38,14 @@ export default function ProjectsClient({ projects }) {
 
   return (
     <main className="md:pt-[262px] sm:pt-[146px] pt-[123px]">
-      <section>
+      <section aria-label="Проекты">
         <div className="flex flex-col w-full 3xl:w-3/5 gap-[35px] sm:gap-[30px] md:gap-[70px] px-main">
           <h1>Проекты</h1>
           <p className="text-dark-grey">
             Разрабатываем сложные цифровые продукты, которые делают работу
             проще, понятнее и безопаснее.
           </p>
-          <ul className=" pb-10 sm:pb-10 lg:pb-[90px] flex gap-4 flex-wrap">
+          <ul className="pb-10 sm:pb-10 lg:pb-[90px] flex gap-4 flex-wrap" role="listbox" aria-label="Фильтр по тегам проектов">
             {navTags.map((e) => (
               <li
                 key={e.id}
@@ -53,6 +53,8 @@ export default function ProjectsClient({ projects }) {
                 className={`cursor-pointer whitespace-nowrap py-3 px-6 bg-grey rounded-[99px] hover:text-white hover:bg-dark-red text-nowrap transition-all duration-300  focus:btn-orange 
                   md:text-[18px] text-[16px] font-normal text-dark-grey
                   ${selectedTags.includes(e.title) ? "bg-red text-white" : "bg-grey"}`}
+                role="option"
+                aria-selected={selectedTags.includes(e.title)}
               >
                 {e.title}
               </li>
@@ -75,6 +77,8 @@ export default function ProjectsClient({ projects }) {
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
             }}
+            aria-label={`Изображение проекта: ${e.title}`}
+            role="img"
           >
             <div className="p-[60px] h-full flex flex-col">
               <h3 className="md:text-4xl text-2xl">{e.title}</h3>        
@@ -156,7 +160,7 @@ export default function ProjectsClient({ projects }) {
       <div className="sm:hidden flex flex-col">
         <MobileSlider />       
 
-        <div className="px-main">
+        <div className="px-main mt-20">
           <form onSubmit={handleSubmit} className="flex flex-col h-full bg-light-grey rounded-[8px] p-[34px]">
             <h3 className="text-[30px] mb-5">Обсудим ваш проект?</h3>
             <p className="text-black pb-10 border-b-[1px] border-grey">

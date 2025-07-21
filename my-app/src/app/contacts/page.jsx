@@ -1,6 +1,17 @@
 export const metadata = {
   title: "Other code | Контакты",
-  description: "dev",
+  description: "Контакты компании Other code: адрес, телефон, email, форма обратной связи. Свяжитесь с нами для консультации или сотрудничества.",
+  openGraph: {
+    title: "Other code | Контакты",
+    description: "Контакты компании Other code: адрес, телефон, email, форма обратной связи.",
+    url: "https://othercode.ru/contacts",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Other code | Контакты",
+    description: "Контакты компании Other code: адрес, телефон, email, форма обратной связи.",
+  }
 };
 
 import SendForm from "./SendForm";
@@ -8,38 +19,26 @@ import SendForm from "./SendForm";
 export default function ContactsPage() {
   return (
     <main className="px-main md:pt-[262px] sm:pt-[146px] pt-[123px] mb-to-footer">
-      <section className="flex flex-col 2xl:flex-row 3xl:gap-0 sm:gap-[100px] gap-[50px]">
+      <section className="flex flex-col 2xl:flex-row 3xl:gap-0 sm:gap-[100px] gap-[50px]" aria-label="Контактная информация и форма">
         <div className="3xl:w-1/2 w-full">
           <div className="flex flex-col gap-[35px] sm:gap-10 md:gap-[70px]">
             <h1>Контакты</h1>
-            <div className="2xl:flex flex-col 2xl:gap-10 sm:gap-0 sm:grid grid-cols-2 sm:grid-rows-2 gap-6 flex ">
+            <div className="2xl:flex flex-col 2xl:gap-10 sm:gap-0 sm:grid grid-cols-2 sm:grid-rows-2 gap-6 flex " aria-label="Контактные данные">
               <p className="order-1">
-                Общество с ограниченной
-                <br />
-                ответственностью «ДРУГОЙКОД»
-                <br />
-                ИНН 2634112452
-                <br />
-                ОГРН 1232600011005
+                Общество с ограниченной<br />ответственностью «ДРУГОЙКОД»<br />ИНН 2634112452<br />ОГРН 1232600011005
               </p>
               <p className="order-2">
-                355017, Россия,
-                <br />
-                г. Ставрополь, ул. Мира 319,
-                <br />
-                5 этаж, офис 6
+                355017, Россия,<br />г. Ставрополь, ул. Мира 319,<br />5 этаж, офис 6
               </p>
               <p className="order-3 sm:order-4">
-                тел: +7 919 753-92-89
-                <br />
-                Email: info@othercode.ru
+                тел: +7 919 753-92-89<br />Email: info@othercode.ru
               </p>
               <div className="flex flex-col gap-[17px] 2xl:mt-0 mt-[26px] order-4 sm:order-3">
                 <p className="3xl:inline sm:hidden inline">
                   Мы в социальных сетях
                 </p>
-                <div className="flex gap-[30px]">
-                  <div className="text-dark-grey hover:text-red ease-in duration-200 cursor-pointer">
+                <div className="flex gap-[30px]" aria-label="Социальные сети">
+                  <div className="text-dark-grey hover:text-red ease-in duration-200 cursor-pointer" aria-label="Telegram">
                     <svg
                       width="30"
                       height="30"
@@ -53,8 +52,7 @@ export default function ContactsPage() {
                       />
                     </svg>
                   </div>
-
-                  <div className="text-dark-grey hover:text-red ease-in duration-200 cursor-pointer">
+                  <div className="text-dark-grey hover:text-red ease-in duration-200 cursor-pointer" aria-label="VK">
                     <svg
                       width="30"
                       height="30"
@@ -68,8 +66,7 @@ export default function ContactsPage() {
                       />
                     </svg>
                   </div>
-
-                  <div className="text-dark-grey hover:text-red ease-in duration-200 cursor-pointer">
+                  <div className="text-dark-grey hover:text-red ease-in duration-200 cursor-pointer" aria-label="LinkedIn">
                     <svg
                       width="30"
                       height="30"
@@ -88,7 +85,6 @@ export default function ContactsPage() {
             </div>
           </div>
         </div>
-
         <div className="w-full 3xl:w-1/2 p-6 sm:p-[60px] border-[1px] border-dark-grey rounded-[5px] 3xl:mb-0 mb-10">
           <SendForm />
         </div>

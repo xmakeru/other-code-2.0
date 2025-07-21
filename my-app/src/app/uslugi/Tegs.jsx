@@ -19,14 +19,17 @@ export default function Tegs({ onSelect }) {
   }
 
   return (
-    <ul className="flex gap-4 flex-wrap my-[80px] sm:my-[100px] md:my-[150px]">
+    <ul className="flex gap-4 flex-wrap my-[80px] sm:my-[100px] md:my-[150px]" role="listbox" aria-label="Выбор направления услуг">
       {navTegs.map((e) => (
         <li
           key={e.id}
           onClick={() => handleClick(e.title)}
           className={`cursor-pointer whitespace-nowrap py-3 px-6 rounded-[99px] md:text-[18px] text-[16px] font-normal 
-            ${selectedTeg === e.title ? 'bg-red text-white' : 'bg-grey text-dark-grey'}
-            hover:text-white hover:bg-dark-red transition-all`}
+          ${selectedTeg === e.title ? 'bg-red text-white' : 'bg-grey text-dark-grey'}
+          hover:text-white hover:bg-dark-red transition-all`}
+          role="option"
+          aria-selected={selectedTeg === e.title}
+          tabIndex={0}
         >
           {e.title}
         </li>

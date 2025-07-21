@@ -40,6 +40,9 @@
   h1 + p {
     @apply text-[26px] md:text-[40px] font-light text-grey leading-[130%]
   }
+  h3 {
+    @apply md:text-4xl text-2xl
+  }
   h2 {
     @apply text-[30px] sm:text-[32px] md:text-[52px]
   }

@@ -4,9 +4,19 @@ import { ARTICLES_REASONS } from "@/config/constants/Vacansy"
 
 export const metadata = {
   title: "Other code | Вакансии",
-  description: "dev",
-}
-
+  description: "Актуальные вакансии: присоединяйтесь к команде Other code. Работа для специалистов в digital, web, blockchain, UX, сопровождении проектов.",
+  openGraph: {
+    title: "Other code | Вакансии",
+    description: "Актуальные вакансии: присоединяйтесь к команде Other code. Работа для специалистов в digital, web, blockchain, UX, сопровождении проектов.",
+    url: "https://othercode.ru/vacansy",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Other code | Вакансии",
+    description: "Актуальные вакансии: присоединяйтесь к команде Other code. Работа для специалистов в digital, web, blockchain, UX, сопровождении проектов.",
+  }
+};
 
 export default function VacansyPage() {
   return(
@@ -21,12 +31,12 @@ export default function VacansyPage() {
         поддерживать и развивать общие компетенции команды.
         </p>
       </div>
-      <section>
+      <section aria-label="Открытые вакансии">
         <h2
         className="mb-10 lg:mb-[70px]">Мы ждём в команду:</h2>
         <CustomAccordeon>
         <ul
-        className="border-t-[1px] border-[#DADADA]">
+        className="border-t-[1px] border-[#DADADA]" aria-label="Список вакансий">
           {VACANSY_ITEMS.map((e, index) => (
             <AccordeonItem
             key={e.id}
@@ -48,13 +58,13 @@ export default function VacansyPage() {
       </CustomAccordeon>
       </section>
 
-      <section>
+      <section aria-label="Преимущества работы в Other code">
         <h2
         className="md:mt-[150px] sm:mt-[100px] mb-[70px] mt-20">5 причин присоединиться к нам</h2>
       <article
       className="">
         <ul
-        className="hidden sm:grid grid-cols-3 grid-rows-2 lg:grid-rows-1 lg:grid-cols-5 gap-8 lg:gap-[42px]">
+        className="hidden sm:grid grid-cols-3 grid-rows-2 lg:grid-rows-1 lg:grid-cols-5 gap-8 lg:gap-[42px]" aria-label="Преимущества для сотрудников">
           {ARTICLES_REASONS.map((e) => (
             <li
             key={e.id}

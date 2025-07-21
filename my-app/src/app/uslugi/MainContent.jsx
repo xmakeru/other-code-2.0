@@ -14,9 +14,11 @@ export default function MainContent() {
         Мы предлагаем полный комплекс услуг для проектов любого уровня сложности и стадии готовности — от начальной, когда есть лишь идея, до поддержки готового ресурса
       </p>
 
-      <Tegs onSelect={setSelectedTeg} />
+      <section aria-label="Фильтр по направлениям услуг">
+        <Tegs onSelect={setSelectedTeg} />
+      </section>
 
-      {selectedTeg === 'Web-разработка' && <WebDev />}
+        {selectedTeg === 'Web-разработка' && <WebDev />}
     </div>
   )
 }
